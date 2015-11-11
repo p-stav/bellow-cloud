@@ -138,7 +138,7 @@ function sendPushToCommenters (country, commentCreator, tempRipple, creatorUsern
 		},
 		error: function(error)
 		{
-			console.log("failed to get Ripple creator. fahk");
+			console.log("failed to get Bellow creator. fahk");
 		}
 	}).then(function(){
 		var commentQuery = new Parse.Query(Comment);
@@ -195,7 +195,7 @@ function sendPushToCommenters (country, commentCreator, tempRipple, creatorUsern
 				Parse.Push.send({
 					where: pushQueryToRippleCreator, // Set our Installation query
 				    data: {
-				  	  alert: creatorUsername +  " commented on a ripple you started",
+				  	  alert: creatorUsername +  " commented on a post you created",
 				  	  badge: "Increment",
 				  	  "rippleId" : tempRipple.id
 				  }
@@ -205,14 +205,14 @@ function sendPushToCommenters (country, commentCreator, tempRipple, creatorUsern
 				var Notification = Parse.Object.extend("Notification");
 				var notification = new Notification();
 				notification.set("user", rippleCreator);
-				notification.set("text", creatorUsername +  " commented on a ripple you started");
+				notification.set("text", creatorUsername +  " commented on a post you created");
 				notification.set("isRead", false);
 				notification.set("isSeen", false);
 				notification.set("type", "Comment");
 				notification.set("rippleId", tempRipple.id);
 				notification.save();
 
-				console.log("we have sent push notifiction to ripple creator");
+				console.log("we have sent a push notifiction to bellow creator");
 			}
 
 			if (usersInsideCountry.length >0)
@@ -222,7 +222,7 @@ function sendPushToCommenters (country, commentCreator, tempRipple, creatorUsern
 				Parse.Push.send({
 				  where: pushQueryInCountry, // Set our Installation query
 				  data: {
-				  	alert: creatorUsername + " replied to a ripple you commented on",
+				  	alert: creatorUsername + " replied to a post you commented on",
 				  	badge: "Increment",
 				  	"rippleId" : tempRipple.id
 				  }
@@ -235,7 +235,7 @@ function sendPushToCommenters (country, commentCreator, tempRipple, creatorUsern
 					var Notification = Parse.Object.extend("Notification");
 					var notification = new Notification();
 					notification.set("user", commentUser);
-					notification.set("text", creatorUsername + " replied to a ripple you commented on");
+					notification.set("text", creatorUsername + " replied to a post you commented on");
 					notification.set("isRead", false);
 					notification.set("isSeen", false);
 					notification.set("type", "Comment");

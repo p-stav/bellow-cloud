@@ -1481,7 +1481,7 @@ function levelCheck(user)
 					Parse.Push.send({
 					  where: reachIncreasePush, // Set our Installation query
 					  data: {
-					  	alert: "You've leveled up! Your ripples now spread to " + CUTOFF_LEVELS[NETWORK_SCORE_CUTOFFS[i - 1]]["reach"] + " people",
+					  	alert: "You've leveled up! Your posts now spread to " + CUTOFF_LEVELS[NETWORK_SCORE_CUTOFFS[i - 1]]["reach"] + " people",
 					  	"goTo" : "MyRipplesViewController"
 					  }
 					});
@@ -1490,7 +1490,7 @@ function levelCheck(user)
 					var Notification = Parse.Object.extend("Notification");
 					var notification = new Notification();
 					notification.set("user", user);
-					notification.set("text", "You've leveled up! Your ripples now spread to " + CUTOFF_LEVELS[NETWORK_SCORE_CUTOFFS[i - 1]]["reach"] + " people");
+					notification.set("text", "You've leveled up! Your posts now spread to " + CUTOFF_LEVELS[NETWORK_SCORE_CUTOFFS[i - 1]]["reach"] + " people");
 					notification.set("isRead", false);
 					notification.set("isSeen", false);
 					notification.set("type", "User");
@@ -1515,7 +1515,7 @@ function sendRipplePush(ripple)
 		Parse.Push.send({
 		  where: pushToOriginator, // Set our Installation query
 		  data: {
-		  	alert: "A ripple of yours has been spread " + newNumPropagated + " times",
+		  	alert: "A post of yours has been spread " + newNumPropagated + " times",
 		  	badge: "Increment",
 		  	"rippleId" : ripple.id
 		  }
@@ -1525,7 +1525,7 @@ function sendRipplePush(ripple)
 		var Notification = Parse.Object.extend("Notification");
 		var notification = new Notification();
 		notification.set("user", user);
-		notification.set("text", "A ripple of yours has been spread " + newNumPropagated + " times");
+		notification.set("text", "A post of yours has been spread " + newNumPropagated + " times");
 		notification.set("isRead", false);
 		notification.set("isSeen", false);
 		notification.set("type", "Ripple");
@@ -1648,7 +1648,7 @@ Parse.Cloud.define("propagateRipple", function(request, response)
 					Parse.Push.send({
 					  where: pushToOriginator, // Set our Installation query
 					  data: {
-					  	alert: "A ripple of yours has been spread " + newNumPropagated + " times",
+					  	alert: "A post of yours has been spread " + newNumPropagated + " times",
 					  	badge: "Increment",
 					  	"rippleId" : ripple.id
 					  }
@@ -1658,7 +1658,7 @@ Parse.Cloud.define("propagateRipple", function(request, response)
 					var Notification = Parse.Object.extend("Notification");
 					var notification = new Notification();
 					notification.set("user", user);
-					notification.set("text", "A ripple of yours has been spread " + newNumPropagated + " times");
+					notification.set("text", "A post of yours has been spread " + newNumPropagated + " times");
 					notification.set("isRead", false);
 					notification.set("isSeen", false);
 					notification.set("type", "Ripple");
@@ -1684,7 +1684,7 @@ Parse.Cloud.define("propagateRipple", function(request, response)
 									Parse.Push.send({
 									  where: reachIncreasePush, // Set our Installation query
 									  data: {
-									  	alert: "You've leveled up! Your ripples now spread to " + CUTOFF_LEVELS[NETWORK_SCORE_CUTOFFS[i - 1]]["reach"] + " people",
+									  	alert: "You've leveled up! Your posts now spread to " + CUTOFF_LEVELS[NETWORK_SCORE_CUTOFFS[i - 1]]["reach"] + " people",
 									  	"goTo" : "MyRipplesViewController"
 									  }
 									});
@@ -1696,7 +1696,7 @@ Parse.Cloud.define("propagateRipple", function(request, response)
 									var Notification = Parse.Object.extend("Notification");
 									var notification = new Notification();
 									notification.set("user", user);
-									notification.set("text", "You've leveled up! Your ripples now spread to " + CUTOFF_LEVELS[NETWORK_SCORE_CUTOFFS[i - 1]]["reach"] + " people");
+									notification.set("text", "You've leveled up! Your posts now spread to " + CUTOFF_LEVELS[NETWORK_SCORE_CUTOFFS[i - 1]]["reach"] + " people");
 									notification.set("isRead", false);
 									notification.set("isSeen", false);
 									notification.set("type", "User");
@@ -1781,7 +1781,7 @@ Parse.Cloud.define("propagateRipple", function(request, response)
 			Parse.Push.send({
 			  where: pushQuery, // Set our Installation query
 			  data: {
-			  	alert: "You have new ripples",
+			  	alert: "You have new posts",
 			  	//alert: "New ripple: " + stringToPush,
 			  	"goTo" : "PropagateRippleTableViewController"
 			  }
