@@ -16,11 +16,11 @@ require('cloud/Comments.js');
 
 
 // reach level hash table with score cutoff as key and name + new reach level as children
-var CUTOFF_LEVELS ={0: 		{"reach": 7, "level": "Sea Serpent"} , //0
-					5: 		{"reach": 8, "level": "Narwhal"}, // 5
-					25: 	{"reach": 9, "level": "Magikarp"}, // 25
-					50: 	{"reach": 10, "level": "Yellow Submarine"}, // 50
-					100: 	{"reach": 12, "level": "Mermaid"}, // 100
+var CUTOFF_LEVELS ={0: 		{"reach": 10, "level": "Sea Serpent"} , //0
+					5: 		{"reach": 11, "level": "Narwhal"}, // 5
+					25: 	{"reach": 12, "level": "Magikarp"}, // 25
+					50: 	{"reach": 13, "level": "Yellow Submarine"}, // 50
+					100: 	{"reach": 14, "level": "Mermaid"}, // 100
 					210: 	{"reach": 15, "level": "Lochness Monster"}, // 210
 					350:	{"reach": 18, "level": "Siren"}, // 250
 					550: 	{"reach": 21, "level": "Leviathan"}, // 550
@@ -33,10 +33,15 @@ var CUTOFF_LEVELS ={0: 		{"reach": 7, "level": "Sea Serpent"} , //0
 					7500:	{"reach": 45, "level": "Moby Dick"}, // 7500
 					10000:	{"reach": 50, "level": "Aqua Man"}, // 10000
 					15000: 	{"reach": 55, "level": "Captain Jack Sparrow"}, // 15000
-					25000: 	{"reach": 60, "level": "Lord of Ripple"}, //25000
-					35000: 	{"reach": 65, "level": "Lady of Ripple"}, // 35000
-					50000:	{"reach": 70, "level": "Poseidon"} // 50000
-
+					20000: 	{"reach": 60, "level": "Cyclopse"}, //25000
+					30000: 	{"reach": 65, "level": "Titan"}, // 35000
+					40000:	{"reach": 70, "level": "Centaur"}, // 50000
+					50000:	{"reach": 75, "level": "Lord of Ripple"}, // 7500
+					60000:	{"reach": 80, "level": "Phoenix"}, // 10000
+					70000: 	{"reach": 85, "level": "Lady of Ripple"}, // 15000
+					80000: 	{"reach": 90, "level": "Griffin"}, //25000
+					90000: 	{"reach": 95, "level": "King of Ripple"}, // 35000
+					100000:	{"reach": 100, "level": "Poseidon"} // 50000
 }
 					
 // array of ordered Reach_level score cutoffs and keys 
