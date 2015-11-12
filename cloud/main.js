@@ -45,7 +45,7 @@ var CUTOFF_LEVELS ={0: 		{"reach": 10, "level": "Sea Serpent"} , //0
 }
 					
 // array of ordered Reach_level score cutoffs and keys 
-var NETWORK_SCORE_CUTOFFS = [0,5,25,50,100,210,350,550,1000,1500,2000,2500,3250,5000,7500,10000,15000,25000,35000,50000];
+var NETWORK_SCORE_CUTOFFS = [0,5,25,50,100,210,350,550,1000,1500,2000,2500,3250,5000,7500,10000,15000,20000,30000,40000,50000,60000,70000,80000,90000,100000];
 
 // ripple milestones with number to increment score with
 var MILESTONE_RIPPLE_ARRAY =	{
