@@ -34,6 +34,7 @@ Parse.Cloud.define("getUserSearchResults", function(request, response)
 						user["objectId"] = users[i].id;
 						user["username"] = users[i].get("username");
 						user["level"] = users[i].get("reachLevel");
+						user["reach"] = users[i].get("reach");
 
 						if (following)
 						{
@@ -98,6 +99,7 @@ Parse.Cloud.define("getFollowingUsers", function(request, response)
 						user["username"] = users[i].get("username");
 						user["level"] = users[i].get("reachLevel");
 						user["isFollowing"] = true;
+						user["reach"] = users[i].get("reach");
 
 						results.push(user);
 					}
