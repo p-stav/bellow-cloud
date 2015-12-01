@@ -242,37 +242,7 @@ function sendPushToCommenters (country, commentCreator, tempRipple, creatorUsern
 					notification.set("rippleId", tempRipple.id);
 					notification.save();
 				}
-			}
-
-			/*if (usersOutsideofCountry.length >0)
-			{
-				var pushQueryOutCountry = new Parse.Query(Parse.Installation);
-				pushQueryOutCountry.containedIn('user', usersOutsideofCountry);
-				Parse.Push.send({
-					where: pushQueryOutCountry, // Set our Installation query
-				    data: {
-				  	  alert: creatorUsername + " replied to a ripple you commented on",
-				  	  badge: "Increment",
-				  	  "rippleId" : tempRipple.id
-				  }
-				});
-
-				for (var i = 0; i < usersOutsideofCountry.length; i++)
-				{
-					var commentUser = usersOutsideofCountry[i];
-					// Create a notification
-					var Notification = Parse.Object.extend("Notification");
-					var notification = new Notification();
-					notification.set("user", commentUser);
-					notification.set("text", creatorUsername + " replied to a ripple you commented on");
-					notification.set("isRead", false);
-					notification.set("isSeen", false);
-					notification.set("type", "Comment");
-					notification.set("rippleId", tempRipple.id);
-					notification.save();
-				}
-			}
-			*/			
+			}		
 		});
 	});
 }

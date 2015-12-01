@@ -9,11 +9,6 @@ Parse.Cloud.job("clearDailyNotifications", function(request, status)
 	userQuery.each(function(user)
 	{
 		user.set("notificationsToday", 0);
-		
-		/*
-		if (user.get("email") != null)
-			user.set("canonicalUsername",user.get("username").toLowerCase());
-		*/
 
 		return user.save();
   	}).then(function() {
@@ -117,7 +112,9 @@ Parse.Cloud.job("sendAPush", function(request, status)
 });
 
 
-/************DONT USE JOBS BELOW ANYMORE*****************/
+/************DEPRECATED*****************//************DEPRECATED*****************/
+/************DEPRECATED*****************//************DEPRECATED*****************/
+/************DEPRECATED*****************//************DEPRECATED*****************/
 Parse.Cloud.job("clearAnonymousWithNoInstallation", function(request, status) 
 {
 	var anonymousUsers = [];
@@ -192,7 +189,7 @@ Parse.Cloud.job("clearAnonymousWithNoInstallation", function(request, status)
    		Find ripple.
 		Add receiverId of MiniRipple to ripple's receiverIdsPropagated
 		save ripple 
-**/
+*/
 Parse.Cloud.job("addPropagatedReceiverIds", function(request, status) 
 {
 	// Set up to modify user data
@@ -255,6 +252,7 @@ Parse.Cloud.job("addPropagatedReceiverIds", function(request, status)
 	});
 });
 
+
 /*
 // UPDATE POINNTS FOR people
 */
@@ -263,7 +261,6 @@ Parse.Cloud.job("updateUserPoints", function(request, status)
 	Parse.Cloud.useMasterKey();
 	userPoints = request.params.pointDict;
 
-	//userPoints = {"31wW4gL49P":1000};
 	var objectIds = Object.keys(userPoints);
 	console.log(objectIds);
 
@@ -326,8 +323,6 @@ function levelChange(user)
 			{
 				if (CUTOFF_LEVELS[NETWORK_SCORE_CUTOFFS[i-1]]["level"] != currentReach)
 				{
-					// console.log("established that reachLevel titles are not equal");
-
 					// update and send push notification if there is a next level
 					reachLevel=  CUTOFF_LEVELS[NETWORK_SCORE_CUTOFFS[i - 1]]["level"];
 					reach =  CUTOFF_LEVELS[NETWORK_SCORE_CUTOFFS[i - 1]]["reach"];

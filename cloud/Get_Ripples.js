@@ -621,31 +621,7 @@ Parse.Cloud.define("getPendingFollowingRipples", function(request, response)
 					ripple.set("miniRippleId", miniripples[index].id);
 					rippleObjectArrayFinal.push(ripple);
 				}
-
 			}
-				
-		
-			
-			/*if (index != -1)
-			{
-				if (miniripple.get("isPropagated") == false || miniripple.get("isPropagated") == true)
-				{
-					if(mrRipple.id == "6sn6BcOBMS")
-						console.log("THIS SHOULD BE DELETED.LKJDSFS:DLFKJS. INDEX IS " + index);
-
-					//console.log('INDEX IS ' + index + " and propagated is " + miniripple.get("isPropagated"));
-					rippleObjectArray.splice(index, 1);
-				}	
-			}*/
-			
-			/*
-			else
-			{
-				console.log('INDEX IS ' + index + " AND DOESN'T EXIST");
-				rippleObjectArray.push(rippleObjectArray[index]);
-			}*/
-
-
 		}
 	}).then(function () {
 		console.log("the ripples now have a length of " + rippleObjectArrayFinal.length);
