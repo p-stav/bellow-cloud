@@ -6,10 +6,16 @@ These files are the APIs written to interface with the database that powers Bell
 These files make use of the Parse Javascript API. Documentation for this can be found here: https://www.parse.com/docs/js/guide
 
 
+
+
 Get Bellow on the iOS or Google Play store here:
 
 https://itunes.apple.com/us/app/bellow/id946792245?mt=8
+
 https://play.google.com/store/apps/details?id=com.KefiLabs.Ripple 
+
+
+
 
 
 
